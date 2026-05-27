@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição de Curso - Cadastro</title>
+</head>
+<body>
+    <header>
+        <h1>Página de Inscrição para Cursos</h1>
+        <hr>
+    </header>
+    
+    <main>
+        <h2>Formulário de Cadastro</h2>
+        
+        <form action="./aula.html" method="post">
+            
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <br>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
+                
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
+                
+                <label for="senha">Senha de Acesso:</label><br>
+                <input type="password" id="senha" name="senha" placeholder="Digite a sua senha" required><br><br>
+
+                <label for="nascimento">Data de Nascimento:</label><br>
+                <input type="date" id="nascimento" name="nascimento" required><br><br>
+
+                <label>Gênero:</label><br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+                
+                <input type="radio" id="outro" name="genero" value="outro">
+                <label for="outro">Outro / Não informar</label><br><br>
+            </fieldset>
+            
+            <br>
+
+            <fieldset>
+                <legend>Escolaridade</legend>
+                <br>
+                <label for="escolaridade">Nível de Formação:</label><br>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="" disabled selected>Selecione seu nível</option>
+                    <option value="fundamental">Ensino Fundamental</option>
+                    <option value="medio">Ensino Médio</option>
+                    <option value="superior">Ensino Superior</option>
+                </select><br><br>
+
+                <label for="ano_formacao">Ano de Formação:</label><br>
+                <input type="number" id="ano_formacao" name="ano_formacao" min="1950" max="2026" placeholder="Ex: 2022" required><br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferências</legend>
+                <br>
+                <label for="curso">Curso Desejado:</label><br>
+                <select id="curso" name="curso" required>
+                    <option value="" disabled selected>Escolha o curso</option>
+                    <option value="ti">Tecnologia da Informação</option>
+                    <option value="adm">Administração</option>
+                    <option value="design">Design Digital</option>
+                </select><br><br>
+
+                <label for="estado">Estado de Preferência:</label><br>
+                <select id="estado" name="estado" required>
+                    <option value="" disabled selected>Selecione seu estado</option>
+                    <option value="BA">Bahia</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    </select><br><br>
+
+                <label>Turno de Preferência (pode escolher mais de um):</label><br>
+                <input type="checkbox" id="manha" name="turno" value="manha">
+                <label for="manha">Manhã</label>
+                
+                <input type="checkbox" id="tarde" name="turno" value="tarde">
+                <label for="tarde">Tarde</label>
+                
+                <input type="checkbox" id="noite" name="turno" value="noite">
+                <label for="noite">Noite</label><br><br>
+
+                <label for="motivo">Por que você quer fazer este curso?</label><br>
+                <textarea id="motivo" name="motivo" rows="4" cols="40" placeholder="Escreva brevemente suas motivações..."></textarea><br><br>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Confirmar Inscrição</button>
+        </form>
+    </main>
+    
+    <footer>
+        <hr>
+        <p>Todos os direitos reservados &copy; 2026</p>
+    </footer>
+</body>
